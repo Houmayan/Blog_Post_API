@@ -14,12 +14,12 @@
 
 ## Post Request
 
-![Post Request](assets/PostRequest.png)
+![Post Request](assets/Postrequest.png)
 
 ## Post Response
 
-![Post Response](assets/PostResponse.png)
+![Post Response](assets/Postresponse.png)
 
 ## Get Resonse
 
-![Get Response](assets/GetingResponse.png)
+![Get Response](assets/Getingresponse.png)

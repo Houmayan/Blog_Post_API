@@ -5,6 +5,8 @@ const router = express.Router();
 
 let blogPosts = [];
 // let id = 1;
+
+// class blog post every post will have title, content, author, createdAt
 class Blog {
   constructor(title, content, author) {
     this.title = title;
@@ -14,7 +16,7 @@ class Blog {
   }
 }
 
-// validation schema
+// validation schema using Joi
 const blogSchema = Joi.object({
   title: Joi.string().min(3).required(),
   content: Joi.string().min(10).required(),
@@ -46,6 +48,7 @@ router.post("/post", (req, res) => {
       error: error.details[0].message,
     });
   }
+
   function sanitizeHtmls(str) {
     if (typeof str !== "string") return str;
     return str.replace(/<\/?[^>]+(>|$)/g, "");
